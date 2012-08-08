@@ -568,6 +568,12 @@
 			},
 			loaded: function() {
 				// console.log( "loaded" );
+			},
+			i18n: {
+			  previousTitle: "Previous",
+			  previousText: "Previous",
+			  nextTitle: "Next",
+			  nextText: "Next"
 			}
 		},
     _create: function() {	
@@ -662,15 +668,15 @@
 				this.prevButton = $("<a>",{
 					"class": "slidesPrevious slidesNavigation",
 					href: "#",
-					title: "Previous",
-					text: "Previous"
+					title: this.options.i18n.previousTitle,
+					text: this.options.i18n.previousText
 				}).appendTo( this.element );
 				
 				this.nextButton = $("<a>",{
 					"class": "slidesNext slidesNavigation",
 					href: "#",
-					title: "Next",
-					text: "Next"
+					title: this.options.i18n.nextTitle,
+					text: this.options.i18n.nextText
 				}).appendTo( this.element );
 			} else {
 				this.nextButton = $(".slidesNext");
